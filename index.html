@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Apna Shop</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="background">
+            <div class="upperbackground">
+                <h1 class="head1">-: Apna Shop :-</h1>
+                <!-- main container first page-->
+                <div class="maincont" id="maincontainer">
+                    <!-- Item List -->
+                    <div class="itemlist">
+                        <marquee behavior="" direction=""><p style="color: blue;">Offers :- Deliverey Charge Free If You are Purches up to &#8377;1000 and 10% off up to &#8377;5000</p></marquee>
+                        <h1>Items List</h1>
+                        
+                        <table border="1">
+                            <tr>
+                                <th>Item</th>
+                                <th>MRP</th>
+                            </tr>
+                            <tr>
+                                <td>1. Pen</td> 
+                                <td>2 &#8377;</td> 
+                            </tr>
+                            <tr>
+                                <td>2. Paper</td>
+                                <td>5 &#8377;</td> 
+                            </tr>
+                            <tr>
+                                <td>3. Pencil</td>
+                                <td>3 &#8377;</td> 
+                            </tr>
+                            <tr>
+                                <td>4. Eraser</td>
+                                <td>2 &#8377;</td> 
+                            </tr>
+                            <tr>
+                                <td>5. Book</td>
+                                <td>25 &#8377;</td> 
+                            </tr>
+    
+                            <tr>
+                                <td colspan="2" id="warn"></td>
+                            </tr>
+    
+                            <tr>
+                                <th>Choose Item</th>
+                                <th>Enter Qunty</th>
+                            </tr>
+    
+                            <tr>
+                                <td colspan="1">
+                                    <select id="choise">
+                                        <option>----Select Option----</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </td>
+    
+                                <td>
+                                    <input id="quant" type="number" placeholder="Qunatity">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2">
+                                    <p class="dis">Display</p>
+                                    <div class="display">
+                                        <p id="res"></p>
+                                        <div class="show_de">
+                                            <p id="itm">Item</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p>:</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p id="qty">Qunty</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p>x</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p id="prc">MRP</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p>=</p>
+                                        </div>
+                                        <div class="show_de">
+                                            <p id="tot">Total</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><button onclick="add_item()">Add Item</button></td>
+                            </tr>
+    
+                        </table>
+                        <button class="bilgen_btn" onclick="bill_gen()">Bill Generate</button>
+                    </div>
+
+                    <div class="showitem">
+                        <h1>-: <u>Purches Item</u> :-</h1>
+                        <table border="1" id="showitem_d">
+                            <tr>
+                                <th>Item</th>
+                                <th>Qunatity</th>
+                                <th>Price</th>
+                            </tr>
+                        </table>
+                        <div class="sm_dis">
+                            <table id="sm">
+                                <tr>
+                                    <td>Total Item : </td>
+                                    <td id="tot_itm">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Qunatity :</td>
+                                    <td id="tot_qnt">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Price : </td>
+                                    <td id="tot_prc">0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <footer>
+                            <p>CopyRight@SAM</p>
+                        </footer>
+                        
+                    </div>
+                </div>
+
+                <!-- Billing Container Second page -->
+                <div class="billcont" id="billcontainer">
+                    <button onclick="back()" id="back_btn">Back <br>&#8592;</button>
+                    <h1>Bill Details</h1>
+                    <div class="bill_cont_dv">
+                        <div class="black">
+                            <table border="1" >
+                                <tbody id="detail">
+                                    <tr>
+                                        <th>Item Name</th>
+                                        <th>Item Price</th>
+                                        <th>Qunatity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                    </tr>
+                                    <tr border="1" id="bill">
+                                        <td colspan="2">Total Price</td>
+                                        <td colspan="2" id="itm_tot_price">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"><center> GST Detail</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">SGST :</td>
+                                        <td colspan="2" id="sgst">?</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">CGST :</td>
+                                        <td colspan="2" id="cgst">?</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Bill :</td>
+                                        <td colspan="2" id="bill_show">?</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Delivery Charge :</td>
+                                        <td colspan="2" id="del_char">?</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"><center>Total Pay Amount</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" id="tot_pay_amt"><center>?</center></td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                            <button id="pay_btn" onclick="pay_bill()">Pay <span id="tpa">?</span>&#8377;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="greet">
+                    <h2>You Saved</h2>
+                    <h3 id="save">?</h3><br>
+                    <h1>:) Thank You (:</h1>
+                    <p id="auth">CopyRight@SAM</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,303 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.background{
+    height: 722px;
+    width: 80%;
+    border: 1px hidden black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-image: url("image/stat01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    box-shadow: 2px 2px 5px 0px black;
+}
+.upperbackground{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(255, 192, 203,0.5); */
+    background-image: linear-gradient(180deg, rgba(237, 138, 16, 0.5), rgba(255, 255, 255, 0.5), rgba(0, 128, 0,0.5));
+
+}
+.maincont{
+    height: 85%;
+    width: 100%;
+    border: 1px hidden black;
+}
+.upperbackground .head1{
+    text-align: center;
+    font-size: 70pt;
+    letter-spacing: 15px;
+}
+.itemlist{
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    float: left;
+}
+.itemlist h1{
+    text-align: center;
+    font-size: 40pt;
+}
+.itemlist table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.itemlist table tr, td, th{
+    height: 35px;
+    width: 250px;
+    font-size: 20pt;
+}
+.itemlist table{
+    border: 1px hidden black;
+    border-collapse: collapse;
+}
+.itemlist table tr td button{
+    height: 45px;
+    width: 100%;
+    border-radius: 100px;
+    font-size: 15pt;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color:rgb(81, 177, 255);
+    border: none;
+    box-shadow: 1px 1.5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.itemlist table tr td button:hover{
+    background-color:rgb(114, 191, 255);
+}
+.itemlist table tr td button:active{
+    background-color:rgb(0, 140, 255);
+}
+.itemlist table tr td select{
+    height: 100%;
+    width: 99%;
+    font-size: 18pt;
+    text-align: center;
+}
+.itemlist table tr td input{
+    height: 100%;
+    width: 100%;
+    font-size: 18pt;
+    text-align: center;
+}
+.itemlist table tr td .display{
+    height: 55px;
+    width: 100%;
+    border: 2px solid greenyellow;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.itemlist table tr td .display .show_de{
+    height: 100%;
+    width: 14.28%;
+    border: 1px hidden red;
+    float: left;
+}
+.itemlist table tr td .display .show_de:nth-child(2n){
+    width: 21.25%;
+}
+.itemlist table tr td .display .show_de:nth-child(2n+1){
+    width: 5%;
+    background-color: rgba(255, 72, 72, 0.5);
+}
+.itemlist table tr td .display .show_de p{
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 10px;
+}
+.itemlist table tr td .dis{
+    margin-top: 2px;
+    font-size: 15pt;
+}
+.itemlist table tr td #res{
+    font-size: 25pt;
+    margin: auto;
+}
+#warn{
+    color: red;
+}
+.showitem{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    position: relative;
+}
+.showitem h1{
+    text-align: center;
+    
+}
+.showitem table{
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+.showitem table tr th{
+    background-color: rgba(0, 128, 255, 0.4);
+}
+.showitem table tr td{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.showitem .sm_dis{
+    width: 100%;
+    height: 110px;
+    border: 2px solid red;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    position: absolute;
+    bottom: 172px;
+}
+.showitem footer{
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0px;
+    font-size: 12pt;
+}
+.showitem .sm_dis table{
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+    background-color: rgba(222, 184, 135, 0.5);
+}
+.bilgen_btn{
+    height: 50px;
+    width: 125px;
+    border-radius: 50px;
+    border: none;
+    font-size: 12pt;
+    margin-top: 13px;
+    margin-left: 42.5%;
+    background-color: rgb(81, 177, 255);
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 1.5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.bilgen_btn:hover{
+    background-color:rgb(114, 191, 255);
+}
+.bilgen_btn:active{
+    background-color:rgb(0, 140, 255);
+}
+
+/* Billing Container */
+#billcontainer{
+    height: 85%;
+    width: 100%;
+    border: 1px solid black;
+    display: none;
+}
+
+#billcontainer h1{
+    text-align: center;
+    /* margin-top: 5px; */
+    font-size: 40pt;
+    color: rgb(31, 49, 67);
+}
+
+#billcontainer #back_btn{
+    height: 40px;
+    width: 70px;
+    font-size: 11pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 10px;
+    background-color: rgb(31, 132, 255);
+    border: none;
+    border-radius: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+    box-shadow: 1px 1.5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+#billcontainer #back_btn:hover{
+    background-color: rgb(68, 152, 255);
+}
+#billcontainer #back_btn:active{
+    background-color: rgb(0, 74, 163);
+}
+.bill_cont_dv{
+    height: 525px;
+    width: 100%;
+    border: 1px hidden red;
+
+}
+.bill_cont_dv .black{
+    height: 100%;
+    width: 700px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bill_cont_dv .black table{
+    border-collapse: collapse;
+    border: 1px solid wheat;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+.bill_cont_dv .black table tbody tr td{
+    height: 30px;
+    font-size: 15pt;
+}
+.bill_cont_dv .black #pay_btn{
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 13pt;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+    
+}
+.bill_cont_dv .black #pay_btn:hover{
+    background-color: rgba(255, 255, 255, 0.953);
+    box-shadow: 1px 1.5px 20px 0px rgba(119, 255, 0, 0.8);
+}
+.bill_cont_dv .black #pay_btn:active{
+    background-color: rgb(255, 255, 255);
+}
+#greet{
+    height: 85%;
+    width: 100%;
+    border: 1px solid black;
+    display: none;
+}
+#greet h2{
+    text-align: center;
+    color: rgb(22, 21, 55);
+    font-size: 40pt;
+    margin-top: 130px;
+}
+#greet h3{
+    text-align: center;
+    color: rgb(22, 21, 55);
+    font-size: 35pt;
+}
+#greet h1{
+    text-align: center;
+    color: rgb(22, 21, 55);
+    font-size: 70pt;
+}
+#greet #auth{
+    text-align: center;
+    font-weight: bold;
+    font-size: 13pt;
+    background-color: yellowgreen;
+    position: relative;
+    top: 220px;
+
+}
